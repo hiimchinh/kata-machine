@@ -3,9 +3,10 @@ export default function bs_list(haystack: number[], needle: number): boolean {
     let hi = haystack.length;
     do {
         let mid = Math.floor((lo + hi) / 2);
-        if (needle === mid) {
+        let midValue = haystack[mid];
+        if (needle === midValue) {
             return true;
-        } else if (needle > mid) {
+        } else if (needle > midValue) {
             lo = mid + 1;
         } else {
             hi = mid;
